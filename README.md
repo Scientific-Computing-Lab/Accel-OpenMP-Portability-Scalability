@@ -1,1 +1,1 @@
-# PVC_OpenMP_Portability_Scalability
+# PVC-OpenMP-Portability-Scalability

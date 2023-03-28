@@ -1,1 +1,1 @@
-# PVC-OpenMP-Portability-Scalability
+# Accel-OpenMP-Portability-Scalability

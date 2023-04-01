@@ -1,0 +1,63 @@
+
+-------------------------------------------------------- Problem size: 350^3 ---------------------------------------------------------------
+
+Run completed:  
+   Problem size        =  350 
+   MPI tasks           =  1 
+   Iteration count     =  20 
+   Final Origin Energy = 6.955859e+09 
+   Testing Plane 0 of Energy Array on rank 0:
+        MaxAbsDiff   = 2.384186e-07
+        TotalAbsDiff = 3.126944e-07
+        MaxRelDiff   =         -nan
+
+Elapsed time         =      68.93 (s)
+Grind time (us/z/c)  = 0.080389364 (per dom)  (0.080389364 overall)
+FOM                  =  12439.456 (z/s)
+
+================================================================
+LIBOMPTARGET_PLUGIN_PROFILE(LEVEL0) for OMP DEVICE(0) Intel(R) Graphics [0x0bda], Thread 0
+----------------------------------------------------------------------------------------------------------------------
+Kernel 0                  : __omp_offloading_10302_4bbd2d__Z22CalcKinematicsForElemsR6DomainPddi_l1927
+Kernel 1                  : __omp_offloading_10302_4bbd2d__ZL15EvalEOSForElemsR6DomainPd_l2662
+Kernel 2                  : __omp_offloading_10302_4bbd2d__ZL17CalcForceForNodesR6Domain_l1417
+Kernel 3                  : __omp_offloading_10302_4bbd2d__ZL20CalcLagrangeElementsR6DomainPd_l2055
+Kernel 4                  : __omp_offloading_10302_4bbd2d__ZL20CalcPositionForNodesR6Domaindi_l1574
+Kernel 5                  : __omp_offloading_10302_4bbd2d__ZL20CalcVelocityForNodesR6Domainddi_l1533
+Kernel 6                  : __omp_offloading_10302_4bbd2d__ZL23InitStressTermsForElemsR6DomainPdS1_S1_i_l363
+Kernel 7                  : __omp_offloading_10302_4bbd2d__ZL23IntegrateStressForElemsR6DomainPdS1_S1_S1_ii_l629
+Kernel 8                  : __omp_offloading_10302_4bbd2d__ZL23IntegrateStressForElemsR6DomainPdS1_S1_S1_ii_l715
+Kernel 9                  : __omp_offloading_10302_4bbd2d__ZL24CalcAccelerationForNodesR6Domaini_l1465
+Kernel 10                 : __omp_offloading_10302_4bbd2d__ZL28CalcFBHourglassForceForElemsR6DomainPdS1_S1_S1_S1_S1_S1_dii_l1164
+Kernel 11                 : __omp_offloading_10302_4bbd2d__ZL28CalcFBHourglassForceForElemsR6DomainPdS1_S1_S1_S1_S1_S1_dii_l936
+Kernel 12                 : __omp_offloading_10302_4bbd2d__ZL28CalcHourglassControlForElemsR6DomainPdd_l1230
+Kernel 13                 : __omp_offloading_10302_4bbd2d__ZL28CalcMonotonicQRegionForElemsR6DomainPdd_l2333
+Kernel 14                 : __omp_offloading_10302_4bbd2d__ZL31CalcMonotonicQGradientsForElemsR6DomainPd_l2138
+Kernel 15                 : __omp_offloading_10302_4bbd2d__ZL43ApplyAccelerationBoundaryConditionsForNodesR6Domain_l1501
+----------------------------------------------------------------------------------------------------------------------
+                          : Host Time (msec)                        Device Time (msec)                      
+Name                      :      Total   Average       Min       Max     Total   Average       Min       Max     Count
+----------------------------------------------------------------------------------------------------------------------
+Compiling                 :    3529.67   3529.67   3529.67   3529.67      0.00      0.00      0.00      0.00      1.00
+DataAlloc                 :   14061.39      7.56      0.00     44.68      0.00      0.00      0.00      0.00   1861.00
+DataRead (Device to Host) :    6067.53     26.85     16.09    155.25   3032.84     13.42     13.16     13.65    226.00
+DataWrite (Host to Device):   18686.06     15.40      0.01    133.12  13095.45     10.80      0.00     91.77   1213.00
+Kernel 0                  :     507.12     25.36     24.68     26.30    477.48     23.87     23.80     24.05     20.00
+Kernel 1                  :     114.12      5.71      5.62      6.08    111.23      5.56      5.50      5.71     20.00
+Kernel 2                  :      71.22      3.56      1.33     45.40     22.90      1.15      1.13      1.17     20.00
+Kernel 3                  :      70.46      3.52      3.35      3.76     59.47      2.97      2.93      3.02     20.00
+Kernel 4                  :      80.22      4.01      3.99      4.05     79.63      3.98      3.96      4.03     20.00
+Kernel 5                  :      79.69      3.98      3.95      4.05     79.04      3.95      3.93      4.02     20.00
+Kernel 6                  :      61.93      3.10      2.76      6.49     43.70      2.18      2.16      2.22     20.00
+Kernel 7                  :    1730.89     86.54     84.10     91.07   1622.74     81.14     80.55     81.45     20.00
+Kernel 8                  :     391.20     19.56     19.48     19.67    388.29     19.41     19.33     19.55     20.00
+Kernel 9                  :      69.31      3.47      3.18      7.63     62.10      3.11      3.06      3.14     20.00
+Kernel 10                 :     400.29     20.01     19.88     20.49    396.91     19.85     19.77     19.92     20.00
+Kernel 11                 :    3347.50    167.38    165.28    174.48   3248.63    162.43    162.01    162.87     20.00
+Kernel 12                 :    2578.16    128.91    125.83    138.48   2415.91    120.80    119.28    121.44     20.00
+Kernel 13                 :     148.86      7.44      7.34      7.73    145.76      7.29      7.22      7.41     20.00
+Kernel 14                 :     461.08     23.05     22.58     23.54    432.75     21.64     21.57     21.74     20.00
+Kernel 15                 :       2.40      0.12      0.06      0.21      0.67      0.03      0.03      0.05     20.00
+Linking                   :       0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      1.00
+OffloadEntriesInit        :       7.07      7.07      7.07      7.07      0.00      0.00      0.00      0.00      1.00
+================================================================

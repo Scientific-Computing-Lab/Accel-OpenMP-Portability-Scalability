@@ -1,1 +1,78 @@
 -------------------------------------------------------- Problem size: 350^3 ---------------------------------------------------------------
+
+
+Run completed:  
+   Problem size        =  350 
+   MPI tasks           =  1 
+   Iteration count     =  20 
+   Final Origin Energy = 6.955859e+09 
+   Testing Plane 0 of Energy Array on rank 0:
+        MaxAbsDiff   = 4.768372e-07
+        TotalAbsDiff = 5.115333e-07
+        MaxRelDiff   =         -nan
+
+
+Elapsed time         =     110.28 (s)
+Grind time (us/z/c)  = 0.12860574 (per dom)  (0.12860574 overall)
+FOM                  =  7775.7027 (z/s)
+
+
+CUDA API Statistics:
+
+ Time (%)  Total Time (ns)  Num Calls   Avg (ns)     Med (ns)    Min (ns)   Max (ns)   StdDev (ns)        Name      
+ --------  ---------------  ---------  -----------  -----------  ---------  ---------  -----------  ----------------
+     40.3      40114651459       1233   32534186.1   18779730.0       3921  205338339   46708164.0  cuMemcpyHtoD_v2 
+     38.0      37825335321        320  118204172.9  113985590.5     636418  299506406  102270160.2  cuCtxSynchronize
+     10.7      10627835052        226   47025818.8   42826078.0   42739835   91018990   13018111.2  cuMemcpyDtoH_v2 
+      5.8       5727911019       1148    4989469.5     391717.5       3105  213352071   20419128.4  cuMemFree_v2    
+      4.9       4846660485       1154    4199879.1    1056709.5       3070  161922607   14773419.4  cuMemAlloc_v2   
+      0.2        170429372          1  170429372.0  170429372.0  170429372  170429372          0.0  cuCtxCreate_v2  
+      0.1         93672059          1   93672059.0   93672059.0   93672059   93672059          0.0  cuModuleLoadData
+      0.1         81161775          1   81161775.0   81161775.0   81161775   81161775          0.0  cuCtxDestroy_v2 
+      0.0          6420936        320      20065.4      11239.5       6066    2566763     142860.2  cuLaunchKernel  
+      0.0          3391108          1    3391108.0    3391108.0    3391108    3391108          0.0  cuLinkComplete  
+      0.0            55202          1      55202.0      55202.0      55202      55202          0.0  cuLinkCreate_v2 
+      0.0             2042          1       2042.0       2042.0       2042       2042          0.0  cuLinkDestroy   
+      0.0              790          1        790.0        790.0        790        790          0.0  cuInit          
+
+[5/7] Executing 'gpukernsum' stats report
+
+CUDA Kernel Statistics:
+
+ Time (%)  Total Time (ns)  Instances   Avg (ns)     Med (ns)    Min (ns)   Max (ns)   StdDev (ns)                                     Name                                   
+ --------  ---------------  ---------  -----------  -----------  ---------  ---------  -----------  --------------------------------------------------------------------------
+     15.1       5696862854         20  284843142.7  284285220.0  283033808  299501199    3481565.4  _ZL28CalcFBHourglassForceForElemsR6DomainPdS1_S1_S1_S1_S1_S1_dii$_omp_fn$0
+     14.0       5312893161         20  265644658.1  265553679.5  265159242  266628679     454914.8  _ZL28CalcFBHourglassForceForElemsR6DomainPdS1_S1_S1_S1_S1_S1_dii$_omp_fn$2
+     13.5       5118905832         20  255945291.6  255929517.0  255821817  256092434      86012.7  _Z22CalcKinematicsForElemsR6DomainPddi$_omp_fn$0                          
+     13.0       4914233739         20  245711687.0  245760825.0  245521251  245888508     125913.9  _ZL23IntegrateStressForElemsR6DomainPdS1_S1_S1_ii$_omp_fn$2               
+     11.8       4454207868         20  222710393.4  222685246.0  222556380  222950285     112548.1  _ZL15EvalEOSForElemsR6DomainPd$_omp_fn$0                                  
+      6.9       2609297634         20  130464881.7  130464689.0  130385180  130557136      47611.1  _ZL28CalcMonotonicQRegionForElemsR6DomainPdd$_omp_fn$0                    
+      6.8       2586041659         20  129302083.0  129285575.0  129169621  129475840      91478.5  _ZL23IntegrateStressForElemsR6DomainPdS1_S1_S1_ii$_omp_fn$0               
+      6.1       2300398159         20  115019908.0  114998345.5  114828207  115285905     128813.1  _ZL28CalcHourglassControlForElemsR6DomainPdd$_omp_fn$0                    
+      6.0       2260498163         20  113024908.2  113033556.5  112936055  113134072      52123.2  _ZL31CalcMonotonicQGradientsForElemsR6DomainPd$_omp_fn$0                  
+      1.7        652311789         20   32615589.5   32577068.0   32531650   32844040      89260.3  _ZL24CalcAccelerationForNodesR6Domaini$_omp_fn$0                          
+      1.6        598880862         20   29944043.1   29942644.0   29870994   30010520      34616.2  _ZL20CalcVelocityForNodesR6Domainddi$_omp_fn$0                            
+      1.4        542022424         20   27101121.2   27098127.5   26973475   27211627      52430.4  _ZL20CalcLagrangeElementsR6DomainPd$_omp_fn$0                             
+      1.3        492973162         20   24648658.1   24643791.5   24601375   24716368      30556.9  _ZL20CalcPositionForNodesR6Domaindi$_omp_fn$0                             
+      0.5        206997323         20   10349866.2   10348369.5   10335685   10367141      10143.2  _ZL23InitStressTermsForElemsR6DomainPdS1_S1_i$_omp_fn$0                   
+      0.2         64177713         20    3208885.7    3207699.0    3181493    3239254      14776.9  _ZL17CalcForceForNodesR6Domain$_omp_fn$0                                  
+      0.0         13226097         20     661304.9     662516.0     631652     682500      11517.2  _ZL43ApplyAccelerationBoundaryConditionsForNodesR6Domain$_omp_fn$0        
+
+[6/7] Executing 'gpumemtimesum' stats report
+
+CUDA Memory Operation Statistics (by time):
+
+ Time (%)  Total Time (ns)  Count   Avg (ns)    Med (ns)   Min (ns)  Max (ns)   StdDev (ns)      Operation     
+ --------  ---------------  -----  ----------  ----------  --------  ---------  -----------  ------------------
+     79.0      39815305170   1233  32291407.3  18623400.0      1536  204312204   46549445.9  [CUDA memcpy HtoD]
+     21.0      10585747209    226  46839589.4  42676568.5  42593854   90627067   12956989.0  [CUDA memcpy DtoH]
+
+[7/7] Executing 'gpumemsizesum' stats report
+
+CUDA Memory Operation Statistics (by size):
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)      Operation     
+ ----------  -----  --------  --------  --------  --------  -----------  ------------------
+ 256060.925   1233   207.673   171.500     0.000  1372.000      264.341  [CUDA memcpy HtoD]
+  77535.690    226   343.078   343.000   343.000   345.948        0.475  [CUDA memcpy DtoH]
+

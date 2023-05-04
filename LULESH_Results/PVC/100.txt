@@ -1,19 +1,40 @@
-
+### problem size = 100^3:
+~~~text
 -------------------------------------------------------- Problem size: 100^3 ---------------------------------------------------------------
-
-Run completed:  
-   Problem size        =  100 
-   MPI tasks           =  1 
-   Iteration count     =  20 
-   Final Origin Energy = 1.622358e+08 
+cycle = 1, time = 1.910718e-07, dt=1.910718e-07
+cycle = 2, time = 4.203581e-07, dt=2.292862e-07
+cycle = 3, time = 4.989486e-07, dt=7.859057e-08
+cycle = 4, time = 5.645779e-07, dt=6.562923e-08
+cycle = 5, time = 6.230838e-07, dt=5.850593e-08
+cycle = 6, time = 6.774092e-07, dt=5.432541e-08
+cycle = 7, time = 7.290587e-07, dt=5.164946e-08
+cycle = 8, time = 7.789464e-07, dt=4.988778e-08
+cycle = 9, time = 8.276916e-07, dt=4.874515e-08
+cycle = 10, time = 8.757493e-07, dt=4.805775e-08
+cycle = 11, time = 9.334186e-07, dt=5.766930e-08
+cycle = 12, time = 9.985303e-07, dt=6.511161e-08
+cycle = 13, time = 1.060082e-06, dt=6.155140e-08
+cycle = 14, time = 1.118087e-06, dt=5.800581e-08
+cycle = 15, time = 1.172544e-06, dt=5.445676e-08
+cycle = 16, time = 1.224534e-06, dt=5.198930e-08
+cycle = 17, time = 1.274973e-06, dt=5.043991e-08
+cycle = 18, time = 1.324652e-06, dt=4.967896e-08
+cycle = 19, time = 1.374324e-06, dt=4.967114e-08
+cycle = 20, time = 1.423995e-06, dt=4.967114e-08
+Run completed:
+   Problem size        =  100
+   MPI tasks           =  1
+   Iteration count     =  20
+   Final Origin Energy = 1.622358e+08
    Testing Plane 0 of Energy Array on rank 0:
-        MaxAbsDiff   = 5.587935e-09
-        TotalAbsDiff = 5.917313e-09
+        MaxAbsDiff   = 9.313226e-09
+        TotalAbsDiff = 9.678982e-09
         MaxRelDiff   =         -nan
 
-Elapsed time         =       6.16 (s)
-Grind time (us/z/c)  = 0.30807105 (per dom)  (0.30807105 overall)
-FOM                  =  3246.0045 (z/s)
+
+Elapsed time         =       6.27 (s)
+Grind time (us/z/c)  = 0.31369295 (per dom)  (0.31369295 overall)
+FOM                  =  3187.8306 (z/s)
 
 ================================================================
 LIBOMPTARGET_PLUGIN_PROFILE(LEVEL0) for OMP DEVICE(0) Intel(R) Graphics [0x0bda], Thread 0
@@ -61,3 +82,4 @@ Kernel 15                 :       0.98      0.05      0.03      0.26      0.14  
 Linking                   :       0.00      0.00      0.00      0.00      0.00      0.00      0.00      0.00      1.00
 OffloadEntriesInit        :       6.70      6.70      6.70      6.70      0.00      0.00      0.00      0.00      1.00
 ================================================================
+~~~

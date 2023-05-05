@@ -1,11 +1,11 @@
-### LULESH Pefromance Scalability on Intel PVC and NVIDIA A100 GPUs
+## LULESH Pefromance Scalability on Intel PVC and NVIDIA A100 GPUs
 
 The LULESH version we run supports OpenMP 4.0 offloading [[1]](#1) and is available in https://github.com/AMDComputeLibraries/OpenMPApps/tree/master/lulesh-mp4.
 
-#### Compilation flags for PVC with oneAPI (icx 2023):
-```-Ofast -qopenmp -fopenmp-targets=spir64 -fiopenmp ```
-#### Compilation flags for PVC with oneAPI (gcc 12.2.0):
-```-Ofast -fopenmp -foffload='-lm -latomic'```
+#### Compilation flags for PVC with oneAPI (icpx 2023):
+```-O3 -fiopenmp -fopenmp-targets=spir64```
+#### Compilation flags for A100 with NVHPC (nvc++ 23.3):
+```-O3 -O3 -mp=gpu -gpu=cc80```
 
 ### Results
 We run LULESH for 20 iterations per execution. The results are shown in PVC and A100 subdirectories. \

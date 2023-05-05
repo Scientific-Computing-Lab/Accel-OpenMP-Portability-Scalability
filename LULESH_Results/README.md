@@ -5,7 +5,7 @@ The LULESH version we run supports OpenMP 4.0 offloading [[1]](#1) and is availa
 #### Compilation flags for PVC with oneAPI (icpx 2023):
 ```-O3 -fiopenmp -fopenmp-targets=spir64```
 #### Compilation flags for A100 with NVHPC (nvc++ 23.3):
-```-O3 -O3 -mp=gpu -gpu=cc80```
+```-O3 -mp=gpu -gpu=cc80```
 
 ### Results
 We run LULESH for 20 iterations per execution. The results are shown in PVC and A100 subdirectories. \

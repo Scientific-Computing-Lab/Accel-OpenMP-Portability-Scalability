@@ -11,7 +11,7 @@ The LULESH version we run supports OpenMP 4.0 offloading [[1]](#1) and is availa
 We run LULESH for 20 iterations per execution. The results are shown in PVC and A100 subdirectories. \
 GPU analytics were collected with NVIDIA Nsight Profiler for A100 and with ```LIBOMPTARGET_PLUGIN_PROFILE=T``` debugging option available in oneAPI for PVC.
 
-### Running Demo on PVC
+### Running LULESH Demo on PVC
 Watch a short demo on how to compile and run LULESH on PVC with oneAPI:
 
 [![LULESH Demo on PVC](https://img.youtube.com/vi/IUOIF6rIvAE/0.jpg)](https://www.youtube.com/watch?v=IUOIF6rIvAE)
